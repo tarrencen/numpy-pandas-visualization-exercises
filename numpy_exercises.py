@@ -240,8 +240,10 @@ f = [
 num_f = np.array([[90, 30, 45, 0, 120, 180],
     [45, -90, -30, 270, 90, 0],
     [60, 45, -45, 90, -45, 180]])
-    
+   
+
 # Exercise 1 - Find the sine of all the numbers in f
+num_f.sine()
 
 # Exercise 2 - Find the cosine of all the numbers in f
 
@@ -259,4 +261,4 @@ num_f = np.array([[90, 30, 45, 0, 120, 180],
 
 # Exercise 9 - Transpose and then print out the shape of f.
 
-# Exercise 10 - Reshape d into an array of 9 x 2
+# Exercise 10 - Reshape f into an array of 9 x 2
