@@ -88,19 +88,37 @@ print(mean_of_b)
 # Exercise 5 - Make a variable named product_of_b to hold the product of 
 # multiplying all the numbers in the above list together
 
-product_of_b = []
+product_of_b = 1
 for i in b:
-    
+    product_of_b *= i
+
+print(product_of_b)
+
+
+
 
 # Exercise 6 - Make a variable named squares_of_b. It should hold each number 
 # in a squared like [1, 4, 9, 16, 25...]
 
 squares_of_b = [i ** 2 for i in b]
+print(squares_of_b)
 
 # Exercise 7 - Make a variable named odds_in_b. It should hold only the odd 
 # numbers
 
+odds_in_b = []
+for i in b:
+    if i % 2 == 1:
+        odds_in_b.append(i)
+print(odds_in_b)
+
 # Exercise 8 - Make a variable named evens_in_b. It should hold only the evens.
+
+evens_in_b = []
+for i in b:
+    if i % 2 == 0:
+        evens_in_b.append(i)
+print(evens_in_b)
 
 ## What about life in two dimensions? A list of lists is matrix, a table, a 
 # spreadsheet, a chessboard...
@@ -112,12 +130,17 @@ c = [
     [6, 7, 8]
 ]
 
-# Exercise 1 - refactor the following to use numpy. Use sum_of_b as the 
-# variable. **Hint, you'll first need to make sure that the "b" variable is a 
+# Exercise 1 - refactor the following to use numpy. Use sum_of_c as the 
+# variable. **Hint, you'll first need to make sure that the "c" variable is a 
 # numpy array**
 sum_of_c = 0
 for row in c:
     sum_of_c += sum(row)
+
+print(sum_of_c)
+
+num_c = np.array([[3, 4, 5], [6, 7, 8]])
+num_c.sum()
 
 # Exercise 2 - refactor the following to use numpy. 
 min_of_c = min(c[0]) if min(c[0]) <= min(c[1]) else min(c[1])  
@@ -126,9 +149,12 @@ min_of_c = min(c[0]) if min(c[0]) <= min(c[1]) else min(c[1])
 # with numpy.
 max_of_c = max(c[0]) if max(c[0]) >= max(c[1]) else max(c[1])
 
+num_c.min()
+
 
 # Exercise 4 - refactor the following using numpy to find the mean of b
 mean_of_c = (sum(c[0]) + sum(c[1])) / (len(c[0]) + len(c[1]))
+num_c.mean()
 
 # Exercise 5 - refactor the following to use numpy for calculating the product 
 # of all numbers multiplied together.
@@ -137,11 +163,15 @@ for row in c:
     for number in row:
         product_of_c *= number
 
+num_c.prod()
+
 # Exercise 6 - refactor the following to use numpy to find the list of squares 
 squares_of_c = []
 for row in c:
     for number in row:
         squares_of_c.append(number**2)
+
+num_c ** 2
 
 
 # Exercise 7 - refactor using numpy to determine the odds_in_b
@@ -150,6 +180,9 @@ for row in c:
     for number in row:
         if(number % 2 != 0):
             odds_in_c.append(number)
+
+num_c % 2 == 1
+num_c[num_c % 2 == 1]
 
 
 # Exercise 8 - refactor the following to use numpy to filter only the even 
@@ -161,13 +194,19 @@ for row in b:
             evens_in_c.append(number)
 
 # Exercise 9 - print out the shape of the array c.
+num_c.shape
 
 # Exercise 10 - transpose the array c.
+num_c.T
 
 # Exercise 11 - reshape the array c to be a single list of 6 numbers. (1 x 6)
 
+num_c.reshape(1,6)
+
 # Exercise 12 - reshape the array c to be a list of 6 lists, each containing 
 # only 1 number (6 x 1)
+
+num_c.reshape(6,1)
 
 ## Setup 3
 d = [
@@ -176,9 +215,17 @@ d = [
     [7, 8, 9]
 ]
 
+num_d = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+
 # HINT, you'll first need to make sure that the "d" variable is a numpy array 
 # prior to using numpy array methods.
 
 # Exercise 1 - Find the min, max, sum, and product of d.
 
+num_d.min()
+num_d.max()
+num_d.sum()
+num_d.prod()
+
 # Exercise 2 - Determine the standard deviation of d.
+num_d.std()
