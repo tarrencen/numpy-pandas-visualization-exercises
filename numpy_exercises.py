@@ -230,6 +230,8 @@ num_d.prod()
 # Exercise 2 - Determine the standard deviation of d.
 num_d.std()
 
+
+
 ## Setup 4
 f = [
     [90, 30, 45, 0, 120, 180],
@@ -237,28 +239,47 @@ f = [
     [60, 45, -45, 90, -45, 180]
 ]
 
-num_f = np.array([[90, 30, 45, 0, 120, 180],
-    [45, -90, -30, 270, 90, 0],
-    [60, 45, -45, 90, -45, 180]])
-   
+num_f = np.array([[90, 30, 45, 0, 120, 180], [45, -90, -30, 270, 90, 0], 
+[60, 45, -45, 90, -45, 180]])
 
 # Exercise 1 - Find the sine of all the numbers in f
-num_f.sine()
+
+np.sin(num_f)
 
 # Exercise 2 - Find the cosine of all the numbers in f
 
+np.cos(num_f)
+
 # Exercise 3 - Find the tangent of all the numbers in f
+
+np.tan(num_f)
 
 # Exercise 4 - Find all the negative numbers in f
 
+num_f[num_f < 0]
+
 # Exercise 5 - Find all the positive numbers in f
+
+num_f[num_f > 0]
 
 # Exercise 6 - Return an array of only the unique numbers in f.
 
+np.unique(num_f)
+
 # Exercise 7 - Determine how many unique numbers there are in f.
+
+np.unique(num_f).size
+len(np.unique(num_f))
 
 # Exercise 8 - Print out the shape of f.
 
+num_f.shape
+
 # Exercise 9 - Transpose and then print out the shape of f.
 
+print(num_f.T)
+
 # Exercise 10 - Reshape f into an array of 9 x 2
+
+num_f.reshape(9, 2)
+
